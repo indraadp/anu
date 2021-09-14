@@ -15,4 +15,4 @@ time rclone copy /tmp/rom/out/target/product/juice/AospExtended*.zip rcloneidp:j
 cd /tmp/rom/out/target/product/juice/
 curl -s "https://api.telegram.org/bot${token_telegram}/sendmessage" --data "text=Download Link -> http://rom.idp.workers.dev/juice/$(ls AospExtended*.zip)=${id_telegram}&parse_mode=html"
 cd /tmp
-time rclone copy ccache.tar.gz rcloneidp:derpfest -P
+time rclone copy ccache.tar.gz rcloneidp:AospExtended -P
