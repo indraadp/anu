@@ -10,5 +10,5 @@ ccache -o compression=true
 ccache -z
 
 . build/envsetup.sh
-lunch derp_juice-userdebug
-mka derp -j8
+lunch aosp_juice-userdebug
+m aex -j$(nproc --all)
