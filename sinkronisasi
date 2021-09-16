@@ -6,10 +6,15 @@ cd /tmp/rom
 repo init -q --no-repo-verify --depth=1 -u git://github.com/AospExtended/manifest.git -b 11.x -g default,-device,-mips,-darwin,-notdefault
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
+# Remove stuff
+rm -rf device/aosp/sepolicy && rm -rf prebuilts/gcc/linux-x86/aarch64/aarch64-elf
+
 # Trees
 git clone --depth=1 https://github.com/indraadp/device_xiaomi_juice -b aex device/xiaomi/juice
 git clone --depth=1 https://github.com/indraadp/prebuilt_vendor_juice --single-branch -b A11 vendor/xiaomi/juice
 git clone --depth=1 https://github.com/indraadp/stormbreaker_kernel_juice --single-branch -b test kernel/xiaomi/juice
 
+git clone --depth=1 https://github.com/indraadp/platform_device_aosp_sepolicy -b 11.x device/aosp/sepolicy
+
 # toolchain
-git clone --depth=1 https://github.com/GengKapak/GengKapak-clang --single-branch -b 12 prebuilts/clang/host/linux-x86/clang-gengkapak
+git clone --depth=1 https://github.com/indraadp/arm64-gcc-11 prebuilts/gcc/linux-x86/aarch64/aarch64-elf
