@@ -17,4 +17,4 @@ git clone --depth=1 https://github.com/indraadp/greenforce_kernel_juice --single
 git clone --depth=1 https://github.com/indraadp/platform_device_aosp_sepolicy -b 11.x device/aosp/sepolicy
 
 # toolchain
-git clone --depth=1 https://gitlab.com/fadlyas07/clang-llvm --single-branch -b master prebuilts/clang/host/linux-x86/clang-greenforce/
+git clone --depth=1 https://github.com/indraadp/arm64-gcc-11 prebuilts/gcc/linux-x86/aarch64/aarch64-elf
