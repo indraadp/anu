@@ -7,7 +7,7 @@ repo init -q --no-repo-verify --depth=1 -u git://github.com/SuperiorOS/manifest.
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # Trees
-git clone --depth=1 https://github.com/indraadp/device_xiaomi_juice -b superior-test device/xiaomi/juice
+git clone --depth=1 https://github.com/indraadp/device_xiaomi_juice -b superior device/xiaomi/juice
 git clone --depth=1 https://github.com/I-n-o-k/prebuilt_vendor_juice --single-branch -b 11 vendor/xiaomi/juice
 git clone --depth=1 https://github.com/indraadp/kernel_xiaomi_juice --single-branch -b test kernel/xiaomi/juice
 
