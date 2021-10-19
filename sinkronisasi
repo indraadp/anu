@@ -12,7 +12,7 @@ rm -rf device/aosp/sepolicy && rm -rf prebuilts/gcc/linux-x86/aarch64/aarch64-el
 # Trees
 git clone --depth=1 https://github.com/indraadp/device_xiaomi_juice -b aex device/xiaomi/juice
 git clone --depth=1 https://github.com/indraadp/prebuilt_vendor_juice --single-branch -b A11 vendor/xiaomi/juice
-git clone --depth=1 https://github.com/indraadp/greenforce_kernel_juice --single-branch -b rvc kernel/xiaomi/juice
+git clone --depth=1 https://github.com/indraadp/kernel_xiaomi_juice --single-branch -b test kernel/xiaomi/juice
 
 git clone --depth=1 https://github.com/indraadp/platform_device_aosp_sepolicy -b 11.x device/aosp/sepolicy
 
