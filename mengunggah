@@ -10,9 +10,11 @@ com ()
 
 time com ccache 1
 
+if [ -f /tmp/rom/out/target/product/juice/SuperiorOS*.zip ]; then
 cd /tmp
 time rclone copy /tmp/rom/out/target/product/juice/Superior*.zip rcloneidp:juice -P
 cd /tmp/rom/out/target/product/juice/
 curl -s "https://api.telegram.org/bot${token_telegram}/sendmessage" --data "text=Download Link -> http://rom.idp.workers.dev/juice/$(ls Superior*.zip)=${id_telegram}&parse_mode=html"
 cd /tmp
 time rclone copy ccache.tar.gz rcloneidp:superior -P
+fi
